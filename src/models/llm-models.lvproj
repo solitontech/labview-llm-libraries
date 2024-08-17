@@ -11,6 +11,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="examples" Type="Folder">
+			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="utils" Type="Folder">
 				<Item Name="env_variables" Type="Folder">
 					<Item Name="base64_fast_decode.vi" Type="VI" URL="../examples/utils/env_variables/base64_fast_decode.vi"/>
@@ -21,14 +22,17 @@
 			</Item>
 			<Item Name="example_llm_azureopenai_unit_test_1.vi" Type="VI" URL="../examples/example_llm_azureopenai_unit_test_1.vi"/>
 			<Item Name="example_llm_openai_unit_test_1.vi" Type="VI" URL="../examples/example_llm_openai_unit_test_1.vi"/>
+			<Item Name="example_llm_ollama_unit_test_1.vi" Type="VI" URL="../examples/example_llm_ollama_unit_test_1.vi"/>
 		</Item>
 		<Item Name="messages" Type="Folder">
 			<Item Name="abstract_message_base.lvclass" Type="LVClass" URL="../abstract_message_base/abstract_message_base.lvclass"/>
 			<Item Name="message_text.lvclass" Type="LVClass" URL="../message_text/message_text.lvclass"/>
 		</Item>
 		<Item Name="model_child" Type="Folder">
+			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="llm_azureopenai_chatmodels.lvclass" Type="LVClass" URL="../llm_azureopenai_chatmodels/llm_azureopenai_chatmodels.lvclass"/>
 			<Item Name="llm_openai_chatmodels.lvclass" Type="LVClass" URL="../llm_openai_chatmodels/llm_openai_chatmodels.lvclass"/>
+			<Item Name="llm_ollama_chatmodels.lvclass" Type="LVClass" URL="../llm_ollama_chatmodels/llm_ollama_chatmodels.lvclass"/>
 		</Item>
 		<Item Name="model_parents" Type="Folder">
 			<Item Name="abstract_llm_base.lvclass" Type="LVClass" URL="../abstract_llm_base/abstract_llm_base.lvclass"/>

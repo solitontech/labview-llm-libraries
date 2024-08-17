@@ -12,8 +12,12 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="examples" Type="Folder">
 			<Item Name="utils" Type="Folder">
-				<Item Name="Get_Env_Var.vi" Type="VI" URL="../examples/utils/Get_Env_Var.vi"/>
-				<Item Name="Set_Env_Var.vi" Type="VI" URL="../examples/utils/Set_Env_Var.vi"/>
+				<Item Name="env_variables" Type="Folder">
+					<Item Name="base64_fast_decode.vi" Type="VI" URL="../examples/utils/env_variables/base64_fast_decode.vi"/>
+					<Item Name="base64_fast_encode.vi" Type="VI" URL="../examples/utils/env_variables/base64_fast_encode.vi"/>
+					<Item Name="get_env_variable.vi" Type="VI" URL="../examples/utils/env_variables/get_env_variable.vi"/>
+					<Item Name="set_env_variable.vi" Type="VI" URL="../examples/utils/env_variables/set_env_variable.vi"/>
+				</Item>
 			</Item>
 			<Item Name="example_llm_azureopenai_unit_test_1.vi" Type="VI" URL="../examples/example_llm_azureopenai_unit_test_1.vi"/>
 			<Item Name="example_llm_openai_unit_test_1.vi" Type="VI" URL="../examples/example_llm_openai_unit_test_1.vi"/>
@@ -32,16 +36,20 @@
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
+				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
+				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
+				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
 				<Item Name="LabVIEWHTTPClient.lvlib" Type="Library" URL="/&lt;vilib&gt;/httpClient/LabVIEWHTTPClient.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
+				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="Path To Command Line String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/Path To Command Line String.vi"/>
 				<Item Name="PathToUNIXPathString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFURL.llb/PathToUNIXPathString.vi"/>
-			</Item>
-			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
+				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
+				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>

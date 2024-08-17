@@ -15,3 +15,6 @@
 *.aliases
 *.lvlps
 .cache/
+
+# Ignore the .env files which contain secrets
+*.env

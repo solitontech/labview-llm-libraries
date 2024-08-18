@@ -30,10 +30,12 @@ To be documented
 | gpt-4 | AzureOpenAI |  Yes | Online |
 | gpt-3.5-turbo | AzureOpenAI |  Yes | Online |
 | Claude 3.5 Sonnet | Anthropic | No | Online |
-| Llama 3.1 8B | ollama | No | Offline |
-| Phi 3 Mini 3.8B | ollama | No | Offline |
-| Gemma 2 2B | ollama | No | Offline |
-| Mistral 7B | ollama | No | Offline |
+| Llama 3.1 8B | ollama | Yes | Offline |
+| Llama 3 8B | ollama | Yes | Offline |
+| Phi 3 Mini 3.8B | ollama | Yes | Offline |
+| Gemma 2 2B | ollama | Yes | Offline |
+| Mistral 7B | ollama | Yes | Offline |
+| tinyllama | ollama | Yes | Offline |
 
 # Vector Databases Supported
 

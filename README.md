@@ -37,6 +37,14 @@ To be documented
 | Mistral 7B | ollama | Yes | Offline |
 | tinyllama | ollama | Yes | Offline |
 
+# Embedding Models supported
+
+| Model Name | Provider | Support Available | Online/Offline |
+|----------|----------|----------|----------|
+| text-embedding-ada-002 | OpenAI | Yes | Online |
+| text-embedding-3-large | OpenAI |  Yes | Online |
+| text-embedding-3-small | OpenAI |  Yes | Online |
+
 # Vector Databases Supported
 
 | Database Name | Provider | Support Available | Online/Offline |

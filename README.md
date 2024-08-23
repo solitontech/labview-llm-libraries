@@ -29,7 +29,10 @@ To be documented
 | gpt-4o | AzureOpenAI |  Yes | Online |
 | gpt-4 | AzureOpenAI |  Yes | Online |
 | gpt-3.5-turbo | AzureOpenAI |  Yes | Online |
-| Claude 3.5 Sonnet | Anthropic | No | Online |
+| Claude 3.5 Sonnet | Anthropic | Yes | Online |
+| Claude 3 Opus | Anthropic | Yes | Online |
+| Claude 3 Sonnet | Anthropic | Yes | Online |
+| Claude 3 Haiku | Anthropic | Yes | Online |
 | Llama 3.1 8B | ollama | Yes | Offline |
 | Llama 3 8B | ollama | Yes | Offline |
 | Phi 3 Mini 3.8B | ollama | Yes | Offline |

@@ -18,6 +18,7 @@
 			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="llm_azureopenai_chatmodels.lvclass" Type="LVClass" URL="../llm_azureopenai_chatmodels/llm_azureopenai_chatmodels.lvclass"/>
 			<Item Name="llm_openai_chatmodels.lvclass" Type="LVClass" URL="../llm_openai_chatmodels/llm_openai_chatmodels.lvclass"/>
+			<Item Name="llm_anthropic_chatmodels.lvclass" Type="LVClass" URL="../llm_anthropic_chatmodels/llm_anthropic_chatmodels.lvclass"/>
 			<Item Name="llm_ollama_chatmodels.lvclass" Type="LVClass" URL="../llm_ollama_chatmodels/llm_ollama_chatmodels.lvclass"/>
 		</Item>
 		<Item Name="model_parents" Type="Folder">

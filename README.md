@@ -52,7 +52,8 @@ To be documented
 
 # Vector Databases Supported
 
-| Database Name | Provider | Support Available | Online/Offline |
-|----------|----------|----------|----------|
-| Weviate | Weaviate | No | Offline |
-| Qudrant | Quadrant | No | Offline |
+| Database Name | Provider | Support Available | Online/Offline | Setup Instruction |
+|----------|----------|----------|----------|----------|
+| Weviate | Weaviate | No | Offline |  |
+| Qudrant | Quadrant | Yes | Offline | [qdrant setup](https://qdrant.tech/documentation/quickstart/) |
+

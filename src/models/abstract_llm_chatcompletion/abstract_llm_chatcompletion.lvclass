@@ -11,6 +11,15 @@
 
 </Property>
 	<Item Name="run_chatcompletion.vi" Type="VI" URL="../run_chatcompletion.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(+!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$*!=!!?!!!@(7&amp;C=X2S97.U8WVF=X.B:W6@9G&amp;T:3ZM&gt;G.M98.T!!B3:8.Q&lt;WZT:1!!2%"Q!"Y!!"M:97*T&gt;(*B9X2@&lt;'RN8W*B=W5O&lt;(:D&lt;'&amp;T=Q!@97*T&gt;(*B9X2@&lt;'RN8W.I982D&lt;WVQ&lt;'6U;7^O)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$"!=!!?!!!@(7&amp;C=X2S97.U8WVF=X.B:W6@9G&amp;T:3ZM&gt;G.M98.T!!&gt;.:8.T97&gt;F!":!1!!"`````Q!)#%VF=X.B:W6T!!"%1(!!(A!!'RFB9H.U=G&amp;D&gt;&amp;^M&lt;'V@9G&amp;T:3ZM&gt;G.M98.T!"ZB9H.U=G&amp;D&gt;&amp;^M&lt;'V@9WBB&gt;'.P&lt;8"M:82J&lt;WYA;7Y!!'%!]!!-!!-!"!!&amp;!!9!"!!%!!1!"!!(!!1!#1!+!Q!!?!!!$1A!!!!!!!!*!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!AA!!!!3!!!.!!!!$!!!!!!!!!!!!!!"!!M!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
+	</Item>
+	<Item Name="run_chatcompletion_core.vi" Type="VI" URL="../run_chatcompletion_core.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(L!!!!$!"/1(!!(A!!*3.B9H.U=G&amp;D&gt;&amp;^M&lt;'V@9WBB&gt;'.P&lt;8"M:82J&lt;WYO&lt;(:D&lt;'&amp;T=Q!@9WBB&gt;'.P&lt;8"M:82J&lt;WZ@&lt;'RN8WFO&gt;'6S:G&amp;D:3"J&lt;A!%!!!!5%"Q!"Y!!#5D97*T&gt;(*B9X2@&lt;'RN8W.I982D&lt;WVQ&lt;'6U;7^O,GRW9WRB=X-!)'.I982D&lt;WVQ&lt;'6U;7^O8WRM&lt;6^J&lt;H2F=G:B9W5A&lt;X6U!!!Q1(!!(A!!(RVB9H.U=G&amp;D&gt;&amp;^N:8.T97&gt;F8W*B=W5O&lt;(:D&lt;'&amp;T=Q!(476T=W&amp;H:1!71%!!!@````]!!QB.:8.T97&gt;F=Q!!-E"Q!"Y!!"]&gt;97*T&gt;(*B9X2@&lt;76T=W&amp;H:6^C98.F,GRW9WRB=X-!#&amp;*F=X"P&lt;H.F!!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!A1&amp;!!!Q!'!!=!#".F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!":!5!!$!!9!"Q!)#76S=G^S)'^V&gt;!"M!0!!%!!!!!%!!1!"!!)!"!!&amp;!!%!!1!"!!%!#1!"!!%!!1!+!A!"#!!!E!!!!!!!!!!!!!!!!!!!!)U!!!))!!!!#1!!!!!!!!!!!!!!!!!!!!!!!!!)!!!!!!!!!!!!!!!!!!!!$1M!!!!"!!M!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 		<Property Name="NI.ClassItem.Flags" Type="Int">1073741824</Property>
@@ -19,14 +28,5 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1082130944</Property>
 		<Property Name="NI.LibItem.Scope" Type="Int">3</Property>
-	</Item>
-	<Item Name="run_chatcompletion_wrap.vi" Type="VI" URL="../run_chatcompletion_wrap.vi">
-		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(+!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$*!=!!?!!!@(7&amp;C=X2S97.U8WVF=X.B:W6@9G&amp;T:3ZM&gt;G.M98.T!!B3:8.Q&lt;WZT:1!!2%"Q!"Y!!"M:97*T&gt;(*B9X2@&lt;'RN8W*B=W5O&lt;(:D&lt;'&amp;T=Q!@97*T&gt;(*B9X2@&lt;'RN8W.I982D&lt;WVQ&lt;'6U;7^O)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$"!=!!?!!!@(7&amp;C=X2S97.U8WVF=X.B:W6@9G&amp;T:3ZM&gt;G.M98.T!!&gt;.:8.T97&gt;F!":!1!!"`````Q!)#%VF=X.B:W6T!!"%1(!!(A!!'RFB9H.U=G&amp;D&gt;&amp;^M&lt;'V@9G&amp;T:3ZM&gt;G.M98.T!"ZB9H.U=G&amp;D&gt;&amp;^M&lt;'V@9WBB&gt;'.P&lt;8"M:82J&lt;WYA;7Y!!'%!]!!-!!-!"!!&amp;!!9!"!!%!!1!"!!(!!1!#1!+!Q!!?!!!$1A!!!!!!!!*!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!AA!!!!3!!!.!!!!$!!!!!!!!!!!!!!"!!M!!!!!</Property>
-		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
-		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
-		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
 	</Item>
 </LVClass>

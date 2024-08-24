@@ -167,10 +167,11 @@
 	<Item Name="run_chatcompletion.vi" Type="VI" URL="../run_chatcompletion.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(@!!!!$!")1(!!(A!!(RVM&lt;'V@&lt;X"F&lt;G&amp;J8W.I982N&lt;W2F&lt;(-O&lt;(:D&lt;'&amp;T=Q!@9WBB&gt;'.P&lt;8"M:82J&lt;WZ@&lt;'RN8WFO&gt;'6S:G&amp;D:3"J&lt;A!%!!!!3E"Q!"Y!!"]&gt;&lt;'RN8W^Q:7ZB;6^D;'&amp;U&lt;7^E:7RT,GRW9WRB=X-!)'.I982D&lt;WVQ&lt;'6U;7^O8WRM&lt;6^J&lt;H2F=G:B9W5A&lt;X6U!!!Q1(!!(A!!(RVB9H.U=G&amp;D&gt;&amp;^N:8.T97&gt;F8W*B=W5O&lt;(:D&lt;'&amp;T=Q!(476T=W&amp;H:1!71%!!!@````]!!QB.:8.T97&gt;F=Q!!-E"Q!"Y!!"]&gt;97*T&gt;(*B9X2@&lt;76T=W&amp;H:6^C98.F,GRW9WRB=X-!#&amp;*F=X"P&lt;H.F!!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!A1&amp;!!!Q!'!!=!#".F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!":!5!!$!!9!"Q!)#76S=G^S)'^V&gt;!"M!0!!%!!!!!%!!1!"!!)!"!!&amp;!!%!!1!"!!%!#1!"!!%!!1!+!Q!"#!!!EA!!!!!!!!!!!!!!!!!!!)U!!!)+!!!!#1!!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!!!!!!!$1M!!!!"!!M!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-		<Property Name="NI.ClassItem.Flags" Type="Int">134217728</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
-		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">3</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1342972432</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1082130960</Property>
+		<Property Name="NI.LibItem.Scope" Type="Int">3</Property>
 	</Item>
 </LVClass>

@@ -33,12 +33,12 @@ To be documented
 | Claude 3 Opus | Anthropic | Yes | Online |
 | Claude 3 Sonnet | Anthropic | Yes | Online |
 | Claude 3 Haiku | Anthropic | Yes | Online |
-| Llama 3.1 8B | ollama | Yes | Offline |
-| Llama 3 8B | ollama | Yes | Offline |
-| Phi 3 Mini 3.8B | ollama | Yes | Offline |
-| Gemma 2 2B | ollama | Yes | Offline |
-| Mistral 7B | ollama | Yes | Offline |
-| tinyllama | ollama | Yes | Offline |
+| Llama 3.1 8B | Ollama | Yes | Offline |
+| Llama 3 8B | Ollama | Yes | Offline |
+| Phi 3 Mini 3.8B | Ollama | Yes | Offline |
+| Gemma 2 2B | Ollama | Yes | Offline |
+| Mistral 7B | Ollama | Yes | Offline |
+| tinyllama | Ollama | Yes | Offline |
 
 # Embedding Models supported
 
@@ -47,6 +47,8 @@ To be documented
 | text-embedding-ada-002 | OpenAI | Yes | Online |
 | text-embedding-3-large | OpenAI |  Yes | Online |
 | text-embedding-3-small | OpenAI |  Yes | Online |
+| nomic-embed-text | Ollama |  Yes | Offline |
+| mxbai-embed-large | Ollama |  Yes | Offline |
 
 # Vector Databases Supported
 

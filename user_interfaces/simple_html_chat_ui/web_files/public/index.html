@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+            height: 100vh;
+            margin: 0;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        #chat-container {
+            background-color: #ffffff;
+            /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+            width: 100%;
+            max-width: 1800px;
+            height: 100%;
+            display: flex;
+            gap: 0.5rem;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        #chatbox {
+            background-color: #ffffff;
+            padding: 10px;
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #bot-name {
+            color: #1976d2;
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .message {
+            display: inline-block;
+            white-space: pre-wrap;
+            font-size: 0.8rem;
+        }
+
+        .user-container {
+            align-self: flex-start;
+            background-color: #f2f4f7;
+            padding: 0.5rem;
+            position: relative;
+            border-radius: 5px;
+            width: calc(100% - 1rem);
+        }
+
+        .assistant-container {
+            align-self: flex-start;
+            background-color: #ffffff;
+            padding: 0.5rem;
+            position: relative;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chat-container">
+        <div id="chatbox"></div>
+    </div>
+
+    <script>
+        const chatbox = document.getElementById('chatbox');
+
+        // Establish WebSocket connection
+        const socket = new WebSocket(`ws://${window.location.host}`);
+
+        // Listen for messages from the WebSocket server
+        socket.addEventListener('message', (event) => {
+            const data = JSON.parse(event.data);
+
+            // Clear the chatbox and display the updated chat history
+            chatbox.innerHTML = ''; // Clear existing chat content
+            data.chatHistory.forEach(chat => {
+                addMessageToChatbox(chat.sender, chat.message);
+            });
+        });
+
+        function addMessageToChatbox(sender, message) {
+            if (sender.toLowerCase() === 'user') {
+                const botName = document.createElement('div');
+                botName.id = 'bot-name';
+                botName.innerHTML = 'You';
+
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message');
+                messageElement.innerHTML = message;
+
+                const messageContainer = document.createElement('div');
+                messageContainer.classList.add('user-container');
+                messageContainer.appendChild(botName);
+                messageContainer.appendChild(messageElement);
+                chatbox.appendChild(messageContainer);
+            }
+            else {
+                const botName = document.createElement('div');
+                botName.id = 'bot-name';
+                botName.innerHTML = 'Assistant';
+
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message');
+                messageElement.innerHTML = message;
+
+                const messageContainer = document.createElement('div');
+                messageContainer.classList.add('assistant-container');
+                messageContainer.appendChild(botName);
+                messageContainer.appendChild(messageElement);
+                chatbox.appendChild(messageContainer);
+            }
+
+            chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll to bottom
+        }
+    </script>
+</body>
+
+</html>

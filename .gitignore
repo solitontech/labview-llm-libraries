@@ -24,4 +24,4 @@
 *.env
 
 # Ignore the node packages
-user_interfaces/simple_html_chat_ui/web_files/node_modules/
+src/user_interfaces/simple_html_chat_ui/web_files/node_modules/

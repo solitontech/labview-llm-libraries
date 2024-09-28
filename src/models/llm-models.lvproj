@@ -13,6 +13,7 @@
 		<Item Name="messages" Type="Folder">
 			<Item Name="abstract_message_base.lvclass" Type="LVClass" URL="../abstract_message_base/abstract_message_base.lvclass"/>
 			<Item Name="message_text.lvclass" Type="LVClass" URL="../message_text/message_text.lvclass"/>
+			<Item Name="message_vectors.lvclass" Type="LVClass" URL="../message_vectors/message_vectors.lvclass"/>
 		</Item>
 		<Item Name="model_child" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
@@ -20,11 +21,17 @@
 			<Item Name="llm_openai_chatmodels.lvclass" Type="LVClass" URL="../llm_openai_chatmodels/llm_openai_chatmodels.lvclass"/>
 			<Item Name="llm_anthropic_chatmodels.lvclass" Type="LVClass" URL="../llm_anthropic_chatmodels/llm_anthropic_chatmodels.lvclass"/>
 			<Item Name="llm_ollama_chatmodels.lvclass" Type="LVClass" URL="../llm_ollama_chatmodels/llm_ollama_chatmodels.lvclass"/>
+			<Item Name="llm_ollama_embedding.lvclass" Type="LVClass" URL="../llm_ollama_embedding/llm_ollama_embedding.lvclass"/>
+			<Item Name="llm_openai_embedding.lvclass" Type="LVClass" URL="../llm_openai_embedding/llm_openai_embedding.lvclass"/>
 		</Item>
 		<Item Name="model_parents" Type="Folder">
 			<Item Name="abstract_llm_base.lvclass" Type="LVClass" URL="../abstract_llm_base/abstract_llm_base.lvclass"/>
 			<Item Name="abstract_llm_chatcompletion.lvclass" Type="LVClass" URL="../abstract_llm_chatcompletion/abstract_llm_chatcompletion.lvclass"/>
+			<Item Name="abstract_llm_embedding.lvclass" Type="LVClass" URL="../abstract_llm_embedding/abstract_llm_embedding.lvclass"/>
 		</Item>
+		<Item Name="instantiate_chat_model.vi" Type="VI" URL="../instantiate_chat_model.vi"/>
+		<Item Name="instantiate_embedding_model.vi" Type="VI" URL="../instantiate_embedding_model.vi"/>
+		<Item Name="message_polymorphic.vi" Type="VI" URL="../message_polymorphic.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>

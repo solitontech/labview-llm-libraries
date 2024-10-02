@@ -7,7 +7,7 @@
 
 # Shared objects (inc. Windows DLLs)
 *.dll
-!user_interfaces/simple_html_chat_ui/assembly_support/**/*.dll
+!src/user_interfaces/simple_html_chat_ui/assembly_support/**/*.dll
 *.so
 *.so.*
 *.dylib
@@ -24,4 +24,7 @@
 *.env
 
 # Ignore the node packages
-user_interfaces/simple_html_chat_ui/web_files/node_modules/
+src/user_interfaces/simple_html_chat_ui/web_files/node_modules/
+
+# Ignore build output folder
+builds/

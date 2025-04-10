@@ -21,6 +21,7 @@
 			<Item Name="llm_openai_chatmodels.lvclass" Type="LVClass" URL="../llm_openai_chatmodels/llm_openai_chatmodels.lvclass"/>
 			<Item Name="llm_anthropic_chatmodels.lvclass" Type="LVClass" URL="../llm_anthropic_chatmodels/llm_anthropic_chatmodels.lvclass"/>
 			<Item Name="llm_ollama_chatmodels.lvclass" Type="LVClass" URL="../llm_ollama_chatmodels/llm_ollama_chatmodels.lvclass"/>
+			<Item Name="llm_gemini_chatmodels.lvclass" Type="LVClass" URL="../llm_gemini_chatmodels/llm_gemini_chatmodels.lvclass"/>
 			<Item Name="llm_ollama_embedding.lvclass" Type="LVClass" URL="../llm_ollama_embedding/llm_ollama_embedding.lvclass"/>
 			<Item Name="llm_openai_embedding.lvclass" Type="LVClass" URL="../llm_openai_embedding/llm_openai_embedding.lvclass"/>
 		</Item>

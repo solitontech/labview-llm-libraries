@@ -39,6 +39,11 @@ To be documented
 | Gemma 2 2B | Ollama | Yes | Offline |
 | Mistral 7B | Ollama | Yes | Offline |
 | tinyllama | Ollama | Yes | Offline |
+| gemini-2.0-flash | Gemini | Yes | Online |
+| gemini-2.0-flash-lite | Gemini | Yes | Online |
+| gemini-1.5-flash | Gemini | Yes | Online |
+| gemini-1.5-flash-8b | Gemini | Yes | Online |
+| gemini-1.5-pro | Gemini | Yes | Online |
 
 # Embedding Models supported
 
@@ -49,6 +54,7 @@ To be documented
 | text-embedding-3-small | OpenAI |  Yes | Online |
 | nomic-embed-text | Ollama |  Yes | Offline |
 | mxbai-embed-large | Ollama |  Yes | Offline |
+| text-embedding-004 | Gemini |  Yes | Online |
 
 # Vector Databases Supported
 

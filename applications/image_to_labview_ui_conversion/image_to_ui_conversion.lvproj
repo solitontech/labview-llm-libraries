@@ -10,6 +10,9 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="sub_vis" Type="Folder" URL="../sub_vis">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="image_to_ui_conversion.vi" Type="VI" URL="../image_to_ui_conversion.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -78,9 +81,6 @@
 			<Item Name="abstract_llm_chatcompletion.lvclass" Type="LVClass" URL="../../../src/models/abstract_llm_chatcompletion/abstract_llm_chatcompletion.lvclass"/>
 			<Item Name="abstract_message_base.lvclass" Type="LVClass" URL="../../../src/models/abstract_message_base/abstract_message_base.lvclass"/>
 			<Item Name="base64_fast_decode.vi" Type="VI" URL="../../../examples/utils/env_variables/base64_fast_decode.vi"/>
-			<Item Name="convert_json_string_to_ui_element.vi" Type="VI" URL="../sub_vis/convert_json_string_to_ui_element.vi"/>
-			<Item Name="create_labview_ui_with_json_string.vi" Type="VI" URL="../sub_vis/create_labview_ui_with_json_string.vi"/>
-			<Item Name="create_ui_ elements.vi" Type="VI" URL="../sub_vis/create_ui_ elements.vi"/>
 			<Item Name="get_env_variable.vi" Type="VI" URL="../../../examples/utils/env_variables/get_env_variable.vi"/>
 			<Item Name="instantiate_chat_model.vi" Type="VI" URL="../../../src/models/instantiate_chat_model.vi"/>
 			<Item Name="llm_anthropic_chatmodels.lvclass" Type="LVClass" URL="../../../src/models/llm_anthropic_chatmodels/llm_anthropic_chatmodels.lvclass"/>

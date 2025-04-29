@@ -12,7 +12,9 @@
 	</Item>
 	<Item Name="SubVI" Type="Folder">
 		<Item Name="check_uncheck_list.vi" Type="VI" URL="../check_uncheck_list.vi"/>
+		<Item Name="config_model.vi" Type="VI" URL="../config_model.vi"/>
 		<Item Name="confirmation_user.vi" Type="VI" URL="../confirmation_user.vi"/>
+		<Item Name="get_config.vi" Type="VI" URL="../get_config.vi"/>
 		<Item Name="get_FP_BD_images.vi" Type="VI" URL="../get_FP_BD_images.vi"/>
 		<Item Name="Update_VI_Controls_description.vi" Type="VI" URL="../Update_VI_Controls_description.vi"/>
 	</Item>

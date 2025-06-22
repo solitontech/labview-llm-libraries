@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-22 20:48:54" Modified_Date="2025-06-21 15:59:00" Creator="venkatesh.chandragir" Comments="" ID="79fa4e6845757204078cd232f0638ae2">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-22 20:48:54" Modified_Date="2025-06-22 13:26:58" Creator="venkatesh.chandragir" Comments="" ID="193d5e336788bb2bbdbe14187751e9f1">
   <Library_General_Settings>
     <Package_File_Name>Soliton_lib_LabVIEW_LLM_Libraries</Package_File_Name>
     <Library_Version>0.1.0.5</Library_Version>
@@ -16,12 +16,15 @@
     <Target>LabVIEW</Target>
   </Library_General_Settings>
   <Advanced_Settings>
-    <Package_Dependencies/>
+    <Package_Dependencies>
+      <Additional_External_Dependencies>jki_lib_state_machine &gt;=2024.0.3.23</Additional_External_Dependencies>
+      <Additional_External_Dependencies>ni_lib_dcaf_progress_bar &gt;=1.1.0.9</Additional_External_Dependencies>
+    </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI/>
       <Post-Build_VI/>
       <Pre-Install_VI/>
-      <Post-Install_VI/>
+      <Post-Install_VI>..\build_support\Post-Install Custom Action.vi</Post-Install_VI>
       <Pre-Uninstall_VI/>
       <Post-Uninstall_VI/>
     </Custom_Action_VIs>
@@ -61,7 +64,7 @@
 1. Simple QA Chat Agent</Description>
       <Copyright/>
       <Packager>Soliton Technologies</Packager>
-      <URL>https://github.com/solitontech/labview-llm-libraries-eap</URL>
+      <URL>https://github.com/solitontech/labview-llm-libraries</URL>
       <Release_Notes>This is the initial release of Soliton LabVIEW LLM Libraries. </Release_Notes>
     </Description>
     <Destinations>
@@ -135,6 +138,12 @@
         <Preserve_Hierarchy>true</Preserve_Hierarchy>
         <Path>&lt;application&gt;\examples\Soliton\LabVIEW LLMs</Path>
       </Additional_Destination>
+      <Additional_Destination>
+        <Name>LabVIEW LLM Tools Menu</Name>
+        <LLB>false</LLB>
+        <Preserve_Hierarchy>true</Preserve_Hierarchy>
+        <Path>&lt;project&gt;\LabVIEW LLM Libraries</Path>
+      </Additional_Destination>
     </Destinations>
     <Source_Files>
       <Destination_Overrides>
@@ -142,6 +151,12 @@
         <Destination>0</Destination>
         <Additional_Destination>true</Additional_Destination>
         <Additional_Destination_Index>0</Additional_Destination_Index>
+      </Destination_Overrides>
+      <Destination_Overrides>
+        <Path>agent/agent_template_creation_tools</Path>
+        <Destination>0</Destination>
+        <Additional_Destination>true</Additional_Destination>
+        <Additional_Destination_Index>2</Additional_Destination_Index>
       </Destination_Overrides>
       <Password_Overrides>
         <Path>.</Path>
@@ -158,6 +173,9 @@
       </Exclusions>
       <Place_Folder_Contents>
         <Path/>
+      </Place_Folder_Contents>
+      <Place_Folder_Contents>
+        <Path>agent/agent_template_creation_tools</Path>
       </Place_Folder_Contents>
     </Source_Files>
     <License_Agreement_Filepath/>
@@ -301,7 +319,7 @@
         <Path>..\src\UI</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>67F64EB6FBDD97659BC80CAF1014BFCD</GUID>
+      <GUID>4DADA9D5B672D5B778CC511488CAB944</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -406,7 +424,7 @@
         <Path>..\src\models\instantiate_embedding_model.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>49DD85B9A3D59F447E90B3913896EF0D</GUID>
+      <GUID>8F78EAB6E38BAE83D9C99304156FFF2A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -581,7 +599,7 @@
         <Path>..\src\vectorstore\abstract_vector_base\retrieve_vectors.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5458C49ADA3E0898813EBC3D45D53F48</GUID>
+      <GUID>11FE155E5632B8C23638C5274AD05933</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -630,21 +648,7 @@
         <Path>..\src\Simple QA Dynamic</Path>
         <VI_Title/>
       </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>simple_qa_agent_sm_template.vi</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>true</is_Merge_VI>
-        <Position>
-          <Row>1</Row>
-          <Column>3</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\src\agent\simple_qa_agent_sm_template.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <GUID>A4044F52F319CB7BF4C39D181140CE21</GUID>
+      <GUID>3832489D8A6B2BADABBAB768A38ECFBE</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -707,7 +711,7 @@
         <Path>..\src\agent\agent_simple_qa\poly\ask_poly.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4A93122941FCCD8129348ACD855064E1</GUID>
+      <GUID>CF038820E2954C6045429A5DCBC6CD52</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -742,7 +746,7 @@
         <Path>..\src\agent\agent_simple_qa_dynamicdata\instantiate_simple_qa_dynamic.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>62FF68DA3D38292CC3FE1F5331F3BF84</GUID>
+      <GUID>A921FCEC83BDD3EB22C5436B7B555B47</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -777,7 +781,7 @@
         <Path>..\src\user_interfaces\simple_html_chat_ui\apis</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F2FBC3E39E6A53F13AC2A43DE66566E4</GUID>
+      <GUID>01E5B149462B6AFB4EBECBFEF767322A</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>6</Parent_Palette_Index>
@@ -882,7 +886,7 @@
         <Path>..\src\user_interfaces\simple_html_chat_ui\apis\set_subpanel_reference.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5F21E90218D432E182EACA48E95708CD</GUID>
+      <GUID>F461353E62C49C4E08E2068C53B98866</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>

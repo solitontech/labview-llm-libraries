@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package dataframe_analyzer;
+
+// the request message contains the dataframe and the user question
+message AnalyzeDataframeRequest {
+    string dataframe = 1; // this represents the dataframe in json format
+    string user_question = 2;
+}
+
+// the response message contains the datatype and the data
+message AnalyzeDataframeResponse {
+    string datatype = 1;
+    string data = 2;
+}
+
+service AnalyzeDataframe {
+    rpc GetAnswer (AnalyzeDataframeRequest) returns (AnalyzeDataframeResponse); // analyzes the dataframe and the user-question and provides answer for for the user-question in the suitable format
+}

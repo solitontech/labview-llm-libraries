@@ -253,7 +253,6 @@ body {
 
 #connectBtn:hover {
   background: linear-gradient(to right, #2575fc, #6a11cb); /* blue to purple */
-  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -266,6 +265,76 @@ body {
   position: relative;
   align-items: center;
   justify-content: center;
+}
+
+.chat-input-home-page {
+  display: flex;
+  height: 82px;
+  width: 60%;
+  background-color: var(--bg-assistant);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.sample-questions {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  height: 94px;
+  overflow: hidden;
+}
+
+.sample-question {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 20px;
+  color: #393e42;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #393e42;
+  border-radius: 70px;
+}
+
+#send-button-home-page {
+  position: absolute;
+  right: 10px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.3);
+}
+
+#send-button-home-page::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="%23ffffff"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#send-button-home-page:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 4px 8px rgba(79, 70, 229, 0.4);
+}
+
+#send-button-home-page:active {
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.3);
 }
 
 #send-button {
@@ -297,12 +366,10 @@ body {
 
 #send-button:hover {
   background-color: var(--primary-hover);
-  transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(79, 70, 229, 0.4);
 }
 
 #send-button:active {
-  transform: translateY(0);
   box-shadow: 0 2px 4px rgba(79, 70, 229, 0.3);
 }
 
@@ -498,6 +565,7 @@ body {
   font-style: normal;
   display: flex;
   align-items: center;
+  gap: 4px;
 }
 
 .source-citation::before {
@@ -539,6 +607,30 @@ body {
   border-top: 1px solid var(--border-color);
   background-color: var(--bg-assistant);
   position: relative;
+}
+
+#user-input-home-page {
+  max-height: 48px;
+  width: 100%;
+  flex-grow: 1;
+  padding: 14px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  color: var(--text-color);
+}
+
+#user-input-home-page:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+#user-input-home-page::placeholder {
+  color: #9ca3af;
 }
 
 #user-input {
@@ -586,7 +678,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
   gap: 24px;
+  padding: 60px 0px;
+  justify-content: space-between;
 }
 
 .startup-logo {
@@ -597,7 +692,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
   box-shadow: 0 8px 16px rgba(79, 70, 229, 0.25);
 }
 
@@ -608,7 +702,7 @@ body {
 }
 
 .startup-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--text-color);
   margin: 0;
@@ -619,7 +713,7 @@ body {
 .startup-subtitle {
   font-size: 1.1rem;
   color: var(--text-light);
-  margin: 0 0 24px 0;
+  margin: 0px;
   line-height: 1.6;
   max-width: 500px;
 }
@@ -629,6 +723,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 16px;
+  width: 100%;
   justify-content: center;
 }
 
@@ -642,7 +737,7 @@ body {
 .feature-item {
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 24px;
   padding: 16px;
   width: 30%;
   display: flex;
@@ -694,12 +789,10 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 8px 16px rgba(79, 70, 229, 0.3);
-  margin-top: 16px;
 }
 
 .start-button:hover {
   background-color: var(--primary-hover);
-  transform: translateY(-2px);
   box-shadow: 0 12px 20px rgba(79, 70, 229, 0.4);
 }
 
@@ -714,10 +807,6 @@ body {
 
   .startup-subtitle {
     font-size: 1rem;
-  }
-
-  .startup-content {
-    gap: 0px;
   }
 
   .feature-text p {

@@ -6,39 +6,35 @@ function scrollToBottom() {
     behavior: "smooth",
   });
 }
+const chatContainer = document.getElementById("chat-container");
 
-document.addEventListener("DOMContentLoaded", function () {
+if (chatContainer) chatContainer.style.display = "none";
+
+function hideHomePage() {
   const startupOverlay = document.getElementById("startup-overlay");
-  const chatContainer = document.getElementById("chat-container");
-  const startChatBtn = document.getElementById("start-chat-btn");
 
-  if (chatContainer) chatContainer.style.display = "none";
+  startupOverlay.style.opacity = "0";
+  startupOverlay.style.transition = "opacity 0.5s ease-out";
 
-  if (startChatBtn) {
-    startChatBtn.addEventListener("click", function () {
-      startupOverlay.style.opacity = "0";
-      startupOverlay.style.transition = "opacity 0.5s ease-out";
+  setTimeout(() => {
+    startupOverlay.style.display = "none";
+    chatContainer.style.display = "flex";
+    chatContainer.style.opacity = "0";
+
+    setTimeout(() => {
+      chatContainer.style.opacity = "1";
+      chatContainer.style.transition = "opacity 0.5s ease-in";
 
       setTimeout(() => {
-        startupOverlay.style.display = "none";
-        chatContainer.style.display = "flex";
-        chatContainer.style.opacity = "0";
-
-        setTimeout(() => {
-          chatContainer.style.opacity = "1";
-          chatContainer.style.transition = "opacity 0.5s ease-in";
-
-          setTimeout(() => {
-            scrollToBottom();
-            document.getElementById("user-input").focus();
-          }, 100);
-        }, 50);
-      }, 500);
-    });
-  }
-});
+        scrollToBottom();
+        document.getElementById("user-input").focus();
+      }, 100);
+    }, 50);
+  }, 500);
+}
 
 const userInput = document.getElementById("user-input");
+const userQuery = document.getElementById("user-input-home-page");
 const connectionStatus = document.getElementById("connection-status");
 const clearChatButton = document.getElementById("clear-chat");
 const toggleConnectionButton = document.getElementById("connectBtn");
@@ -79,7 +75,13 @@ function connectWebSocket() {
 
     socket.addEventListener("message", (event) => {
       hideTyping();
-      addMessageToChatbox("bot", event.data);
+      try {
+        const data = JSON.parse(event.data);
+        addMessageToChatbox("Assistant", data.message, data.source);
+      } catch (e) {
+        console.warn("Received non-JSON message:", e);
+        addMessageToChatbox("Assistant", event.data);
+      }
     });
 
     socket.addEventListener("close", () => {
@@ -141,7 +143,7 @@ function showTyping() {
   const typingDiv = Object.assign(document.createElement("div"), {
     id: "typingIndicator",
     className: "typing",
-    textContent: "Bot is typing...",
+    textContent: "Assistant is typing...",
   });
 
   chatMessages.appendChild(typingDiv);
@@ -159,8 +161,36 @@ document.getElementById("user-input")?.addEventListener("keypress", (e) => {
   }
 });
 
-function sendMessage() {
-  const text = userInput.value.trim();
+document
+  .getElementById("user-input-home-page")
+  ?.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleUserPrompt();
+    }
+  });
+
+function handleUserPrompt() {
+  const userPrompt = userQuery.value.trim();
+
+  if (!userPrompt) return;
+  hideHomePage();
+  sendMessage(userPrompt);
+}
+
+function handleSampleQuestionClick(sampelQuestion) {
+  if (!sampelQuestion) return;
+
+  hideHomePage();
+  sendMessage(sampelQuestion);
+}
+
+function sendMessage(question = "") {
+  let text = "";
+
+  if (!question) text = userInput.value.trim();
+  else text = question.trim();
+
   if (!text) return;
 
   addMessageToChatbox("user", text);

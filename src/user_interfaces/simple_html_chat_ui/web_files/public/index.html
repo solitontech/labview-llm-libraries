@@ -1,136 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chatbot</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: baseline;
-            height: 100vh;
-            margin: 0;
-            line-height: 1.5;
-            font-weight: 400;
-        }
-
-        #chat-container {
-            background-color: #ffffff;
-            /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
-            width: 100%;
-            max-width: 1800px;
-            height: 100%;
-            display: flex;
-            gap: 0.5rem;
-            flex-direction: column;
-            overflow: hidden;
-            border-radius: 10px;
-            margin: 0 auto;
-        }
-
-        #chatbox {
-            background-color: #ffffff;
-            padding: 10px;
-            flex-grow: 1;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #bot-name {
-            color: #1976d2;
-            font-size: 1rem;
-            font-weight: 700;
-            text-align: left;
-        }
-
-        .message {
-            display: inline-block;
-            white-space: pre-wrap;
-            font-size: 0.8rem;
-        }
-
-        .user-container {
-            align-self: flex-start;
-            background-color: #f2f4f7;
-            padding: 0.5rem;
-            position: relative;
-            border-radius: 5px;
-            width: calc(100% - 1rem);
-        }
-
-        .assistant-container {
-            align-self: flex-start;
-            background-color: #ffffff;
-            padding: 0.5rem;
-            position: relative;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="chat-container">
-        <div id="chatbox"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatbot UI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="../scripts/webSocket.js"></script>
+    <script defer src="../scripts/sessionInfo.js"></script>
+  </head>
+  <body>
+    <div id="startup-overlay">
+      <div class="startup-content">
+        <div class="startup-logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        <h1 class="startup-title">LabVIEW LLM Chat Interface</h1>
+        <p class="startup-subtitle">
+          Interact with AI models through a clean and intuitive interface
+          designed for LabVIEW integration.
+        </p>
+        <div class="startup-features">
+          <div class="startup-container">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h3>Multiple AI Models</h3>
+                <p>
+                  Connect to various LLM models including OpenAI, Gemini,
+                  Anthropic, and more
+                </p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h3>Source Citations</h3>
+                <p>
+                  Get detailed references and clickable sources with AI
+                  responses
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="startup-container">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h3>LabVIEW Integration</h3>
+                <p>
+                  Seamlessly connects with LabVIEW applications and workflows
+                </p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h3>Session Management</h3>
+                <p>
+                  Create and manage conversation sessions with persistent
+                  history
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-input-home-page">
+          <input
+            type="text"
+            id="user-input-home-page"
+            placeholder="Type a message..."
+            autocomplete="off"
+          />
+          <button
+            id="send-button-home-page"
+            onclick="handleUserPrompt()"
+          ></button>
+        </div>
+        <footer class="sample-questions">
+          <div
+            class="sample-question"
+            onclick="handleSampleQuestionClick('Raise a ticker for pc not working explaining the best PC configs for AI training in minimum 100 words')"
+          >
+            Raise a ticket for pc not working explaining the best PC configs for
+            AI training in minimum 100 words
+          </div>
+          <div class="sample-question">Tell me about your application</div>
+          <div class="sample-question">
+            Raise a ticket for pc not working explaining the best PC configs for
+            AI training in minimum 100 words
+          </div>
+          <div class="sample-question">
+            Raise a ticket for pc not working explaining the best PC configs for
+            AI training in minimum 100 words
+          </div>
+        </footer>
+      </div>
     </div>
-
-    <script>
-        const chatbox = document.getElementById('chatbox');
-
-        // Establish WebSocket connection
-        const socket = new WebSocket(`ws://${window.location.host}`);
-
-        // Listen for messages from the WebSocket server
-        socket.addEventListener('message', (event) => {
-            const data = JSON.parse(event.data);
-
-            // Clear the chatbox and display the updated chat history
-            chatbox.innerHTML = ''; // Clear existing chat content
-            data.chatHistory.forEach(chat => {
-                addMessageToChatbox(chat.sender, chat.message);
-            });
-        });
-
-        function addMessageToChatbox(sender, message) {
-            if (sender.toLowerCase() === 'user') {
-                const botName = document.createElement('div');
-                botName.id = 'bot-name';
-                botName.innerHTML = 'You';
-
-                const messageElement = document.createElement('div');
-                messageElement.classList.add('message');
-                messageElement.innerHTML = message;
-
-                const messageContainer = document.createElement('div');
-                messageContainer.classList.add('user-container');
-                messageContainer.appendChild(botName);
-                messageContainer.appendChild(messageElement);
-                chatbox.appendChild(messageContainer);
-            }
-            else {
-                const botName = document.createElement('div');
-                botName.id = 'bot-name';
-                botName.innerHTML = 'Assistant';
-
-                const messageElement = document.createElement('div');
-                messageElement.classList.add('message');
-                messageElement.innerHTML = message;
-
-                const messageContainer = document.createElement('div');
-                messageContainer.classList.add('assistant-container');
-                messageContainer.appendChild(botName);
-                messageContainer.appendChild(messageElement);
-                chatbox.appendChild(messageContainer);
-            }
-
-            chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll to bottom
-        }
-    </script>
-</body>
-
+    <div class="chat-container" id="chat-container">
+      <header class="chat-header">
+        <div class="app-logo">
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            stroke="currentColor"
+            stroke-width="1.5"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>
+          <span class="app-title">LabVIEW Chat</span>
+        </div>
+        <div id="session-info">
+          <div class="session-controls">
+            <span id="current-session">default</span>
+          </div>
+          <div class="buttons">
+            <button id="clear-chat" title="Clear Chat History">Clear</button>
+            <button id="connectBtn">Reconnect</button>
+          </div>
+        </div>
+      </header>
+      <div id="connection-status" class="connected">Connected</div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <footer class="chat-input">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Type a message..."
+          autocomplete="off"
+        />
+        <button id="send-button" onclick="sendMessage()"></button>
+      </footer>
+    </div>
+  </body>
 </html>

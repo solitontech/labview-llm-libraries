@@ -70,7 +70,7 @@ function connectWebSocket() {
 
       updateConnectionStatus("connected", "Connected");
       updateToggleButton("Disconnect", "connected");
-      appendSystemMessage("Connected to server");
+      // appendSystemMessage("Connected to server");
     });
 
     socket.addEventListener("message", (event) => {
@@ -198,14 +198,15 @@ function sendMessage(question = "") {
 
   if (socket?.readyState === WebSocket.OPEN) {
     try {
-      socket.send(text);
+      console.log("Sending message:", text);
+      socket.send(JSON.stringify({"key":"User Prompt","data":text}));
       showTyping();
     } catch (error) {
       console.error("Send error:", error);
       appendSystemMessage(`Failed to send message: ${error.message}`);
     }
   } else {
-    appendSystemMessage("Not connected to server. Reconnecting...");
+    // appendSystemMessage("Not connected to server. Reconnecting...");
     connectionStatus.className = "reconnecting";
     connectionStatus.textContent = "Reconnecting...";
     connectWebSocket();
@@ -262,6 +263,7 @@ if (clearChatButton) {
   clearChatButton.addEventListener("click", () => {
     chatMessages.innerHTML = "";
     appendSystemMessage("Chat history cleared");
+    socket.send(JSON.stringify({"key":"clear","data":""}));
   });
 }
 

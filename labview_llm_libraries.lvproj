@@ -106,9 +106,6 @@
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
 			<Item Name="add_message.vi" Type="VI" URL="../src/user_interfaces/simple_html_chat_ui/apis/add_message.vi"/>
-			<Item Name="Assisstant Reply.vi" Type="VI" URL="../src/user_interfaces/simple_html_chat_ui/apis/Assisstant Reply.vi"/>
-			<Item Name="Delete_Data_Core.vi" Type="VI" URL="../examples/SubVIs/Delete_Data_Core.vi"/>
-			<Item Name="Init_Data_Core.vi" Type="VI" URL="../examples/SubVIs/Init_Data_Core.vi"/>
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>

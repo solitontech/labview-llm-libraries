@@ -263,7 +263,7 @@ if (clearChatButton) {
   clearChatButton.addEventListener("click", () => {
     chatMessages.innerHTML = "";
     appendSystemMessage("Chat history cleared");
-    socket.send(JSON.stringify({"key":"clear","data":""}));
+    socket.send(JSON.stringify({"key":"Clear History","data":""}));
   });
 }
 

@@ -109,7 +109,6 @@
 			<Item Name="mscorlib" Type="VI" URL="mscorlib">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="set_subpanel_reference.vi" Type="VI" URL="../src/user_interfaces/simple_html_chat_ui/apis/set_subpanel_reference.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

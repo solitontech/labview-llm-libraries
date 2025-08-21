@@ -1,0 +1,12 @@
+{
+  "name": "labview-llm-websocket-server",
+  "version": "1.0.0",
+  "description": "Mock WebSocket server for LabVIEW LLM libraries test client",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  }
+}

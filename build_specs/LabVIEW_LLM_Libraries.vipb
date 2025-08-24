@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-22 20:48:54" Modified_Date="2025-08-22 00:22:08" Creator="venkatesh.chandragir" Comments="" ID="1c40467d78326a4412762956f686dd49">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-22 20:48:54" Modified_Date="2025-08-24 10:16:40" Creator="venkatesh.chandragir" Comments="" ID="019eaf913951245717ab245d57a56e39">
   <Library_General_Settings>
     <Package_File_Name>Soliton_lib_LabVIEW_LLM_Libraries</Package_File_Name>
     <Library_Version>0.1.0.5</Library_Version>
@@ -172,6 +172,9 @@
       <Exclusions>
         <Path>models/llm-models.lvproj</Path>
       </Exclusions>
+      <Exclusions>
+        <Path>user_interfaces/simple_html_chat_ui/web_files/server</Path>
+      </Exclusions>
       <Place_Folder_Contents>
         <Path/>
       </Place_Folder_Contents>
@@ -320,7 +323,7 @@
         <Path>..\src\UI</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F24011F005BEC6A40B7EE6C655707484</GUID>
+      <GUID>2E22B268EE10A75704F552D337429268</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -425,7 +428,7 @@
         <Path>..\src\models\instantiate_embedding_model.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>31F4ECB501857586CE784C89E404CB2C</GUID>
+      <GUID>B00582CFCE901053912B5CD5ECF968BB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -600,7 +603,7 @@
         <Path>..\src\vectorstore\abstract_vector_base\retrieve_vectors.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D9DD6F327823D687E79EC26D37380BA6</GUID>
+      <GUID>149DCD0B3AC14628D3204083E28EB82E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -649,7 +652,7 @@
         <Path>..\src\Simple QA Dynamic</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2B199715C016A4ED319EAB045CA743E5</GUID>
+      <GUID>96F65485AD0CFF2C9E4564414080AD4B</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -712,7 +715,7 @@
         <Path>..\src\agent\agent_simple_qa\poly\ask_poly.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3D0D65D085C72E6B52E8D972CA984A33</GUID>
+      <GUID>30A96D4D52CCFFBBE94372999F99164E</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -747,7 +750,7 @@
         <Path>..\src\agent\agent_simple_qa_dynamicdata\instantiate_simple_qa_dynamic.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F010E2C4D11ECFDAD82123CE20B049B5</GUID>
+      <GUID>AF64A2B08D7C7CEFD2BB7A558AACE12F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -782,7 +785,7 @@
         <Path>..\src\user_interfaces\simple_html_chat_ui\apis</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DBF2FB2D5AD5027BBEA15C904F35E95F</GUID>
+      <GUID>427123EDB9BFD817F34BAD44E73197E9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>6</Parent_Palette_Index>
@@ -859,7 +862,7 @@
         <Path>..\src\user_interfaces\simple_html_chat_ui\apis\destroy.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5CDB2F01A25C100485590F68CA80CA78</GUID>
+      <GUID>A2490EACF74A7C07EE911D3D9B0EF40D</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>

@@ -679,9 +679,18 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  width: 70%;
   gap: 24px;
   padding: 60px 0px;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
 }
 
 .startup-logo {
@@ -739,7 +748,7 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 24px;
   padding: 16px;
-  width: 30%;
+  width: 40%;
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -763,12 +772,19 @@ body {
   height: 20px;
   stroke: var(--primary-color);
 }
+.feature-text {
+  width: 100%;
+}
 
 .feature-text h3 {
   font-size: 0.95rem;
   font-weight: 600;
   margin: 0 0 4px 0;
   color: var(--text-color);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .feature-text p {
@@ -776,6 +792,10 @@ body {
   color: var(--text-light);
   margin: 0;
   line-height: 1.5;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .start-button {

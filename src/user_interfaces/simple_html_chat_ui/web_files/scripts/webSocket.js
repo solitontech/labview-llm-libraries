@@ -1,3 +1,28 @@
+// Render features on homepage
+function renderFeatures(features) {
+  // Only use the first 4 features
+  const featuresContainer = document.getElementById("startup-features");
+  if (!featuresContainer) return;
+  featuresContainer.innerHTML = "";
+  const limited = features.slice(0, 4);
+  for (let i = 0; i < limited.length; i += 2) {
+    const group = limited.slice(i, i + 2);
+    const containerDiv = document.createElement("div");
+    containerDiv.className = "startup-container";
+    group.forEach((f) => {
+      const featureDiv = document.createElement("div");
+      featureDiv.className = "feature-item";
+      featureDiv.innerHTML = `
+        <div class="feature-text">
+          <h3 title="${f.title}">${f.title}</h3>
+          <p title="${f.desc}">${f.desc}</p>
+        </div>
+      `;
+      containerDiv.appendChild(featureDiv);
+    });
+    featuresContainer.appendChild(containerDiv);
+  }
+}
 const chatMessages = document.getElementById("chatMessages");
 
 function scrollToBottom() {
@@ -77,7 +102,12 @@ function connectWebSocket() {
       hideTyping();
       try {
         const data = JSON.parse(event.data);
-        addMessageToChatbox("Assistant", data.message, data.source);
+        // Listen for 'feature' event type
+        if (data.event === "feature" && Array.isArray(data.features)) {
+          renderFeatures(data.features);
+        } else {
+          addMessageToChatbox("Assistant", data.message, data.source);
+        }
       } catch (e) {
         console.warn("Received non-JSON message:", e);
         addMessageToChatbox("Assistant", event.data);

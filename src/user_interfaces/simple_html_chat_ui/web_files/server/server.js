@@ -97,7 +97,28 @@ wss.on("connection", (ws) => {
   ws.send(
     JSON.stringify({
       event: "feature",
-      features: features.map((f) => ({ title: f.title, desc: f.description })),
+      features: [
+        {
+          title: "Multiple AI Models",
+          description:
+            "Connect to various LLM models including Open AI, Gemini, Anthropic, and more",
+        },
+        {
+          title: "Source Citations",
+          description:
+            "Get detailed references and clickable sources with AI responses",
+        },
+        {
+          title: "LabVIEW Integration",
+          description:
+            "Seamlessly connects with LabVIEW applications and workflows",
+        },
+        {
+          title: "Session Management",
+          description:
+            "Create and manage conversation sessions with persistent history",
+        },
+      ],
     })
   );
   // Create a new session for this connection

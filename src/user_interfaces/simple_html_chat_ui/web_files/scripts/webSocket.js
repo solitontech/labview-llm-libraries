@@ -15,7 +15,7 @@ function renderFeatures(features) {
       featureDiv.innerHTML = `
         <div class="feature-text">
           <h3 title="${f.title}">${f.title}</h3>
-          <p title="${f.desc}">${f.desc}</p>
+          <p title="${f.description}">${f.description}</p>
         </div>
       `;
       containerDiv.appendChild(featureDiv);
@@ -229,7 +229,7 @@ function sendMessage(question = "") {
   if (socket?.readyState === WebSocket.OPEN) {
     try {
       console.log("Sending message:", text);
-      socket.send(JSON.stringify({"key":"User Prompt","data":text}));
+      socket.send(JSON.stringify({ key: "User Prompt", data: text }));
       showTyping();
     } catch (error) {
       console.error("Send error:", error);
@@ -293,7 +293,7 @@ if (clearChatButton) {
   clearChatButton.addEventListener("click", () => {
     chatMessages.innerHTML = "";
     appendSystemMessage("Chat history cleared");
-    socket.send(JSON.stringify({"key":"Clear History","data":""}));
+    socket.send(JSON.stringify({ key: "Clear History", data: "" }));
   });
 }
 

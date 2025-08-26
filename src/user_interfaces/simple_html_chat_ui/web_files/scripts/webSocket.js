@@ -49,8 +49,13 @@ const maxReconnectAttempts = 10;
 
 connectWebSocket();
 
+function getWebSocketPort() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("port") || "6123"; // default to 6123 if not provided
+}
+
 function connectWebSocket() {
-  const host = "ws://localhost:6123";
+  const host = `ws://localhost:${getWebSocketPort()}`;
   if (isConnecting) return;
 
   isConnecting = true;
@@ -199,7 +204,7 @@ function sendMessage(question = "") {
   if (socket?.readyState === WebSocket.OPEN) {
     try {
       console.log("Sending message:", text);
-      socket.send(JSON.stringify({"key":"User Prompt","data":text}));
+      socket.send(JSON.stringify({ key: "User Prompt", data: text }));
       showTyping();
     } catch (error) {
       console.error("Send error:", error);
@@ -263,7 +268,7 @@ if (clearChatButton) {
   clearChatButton.addEventListener("click", () => {
     chatMessages.innerHTML = "";
     appendSystemMessage("Chat history cleared");
-    socket.send(JSON.stringify({"key":"Clear History","data":""}));
+    socket.send(JSON.stringify({ key: "Clear History", data: "" }));
   });
 }
 

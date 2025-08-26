@@ -51,7 +51,7 @@ connectWebSocket();
 
 function getWebSocketPort() {
   const params = new URLSearchParams(window.location.search);
-  return params.get("wsPort") || "6123"; // default to 6123 if not provided
+  return params.get("port") || "6123"; // default to 6123 if not provided
 }
 
 function connectWebSocket() {

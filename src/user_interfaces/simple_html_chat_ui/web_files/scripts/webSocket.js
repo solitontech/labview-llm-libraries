@@ -296,7 +296,7 @@ function addMessageToChatbox(sender, message, source) {
 
   const messageDiv = document.createElement("div");
   messageDiv.className = "message";
-  messageDiv.innerHTML = message;
+  messageDiv.innerHTML = marked.parse(message);
 
   const messageContainer = document.createElement("div");
   messageContainer.className = containerClass;

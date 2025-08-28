@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-22 20:48:54" Modified_Date="2025-08-24 10:23:39" Creator="venkatesh.chandragir" Comments="" ID="6647b33ca8f8dd7314cdf923ffff977e">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-22 20:48:54" Modified_Date="2025-08-28 13:41:50" Creator="venkatesh.chandragir" Comments="" ID="a68bdfd8e0c0a1e05fe60f95a1680581">
   <Library_General_Settings>
     <Package_File_Name>Soliton_lib_LabVIEW_LLM_Libraries</Package_File_Name>
-    <Library_Version>0.1.0.6</Library_Version>
+    <Library_Version>0.1.0.7</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds</Library_Output_Folder>
@@ -20,6 +20,7 @@
       <Additional_External_Dependencies>jki_lib_state_machine &gt;=2024.0.3.23</Additional_External_Dependencies>
       <Additional_External_Dependencies>mediamongrels_ltd_lib_websockets_api &gt;=2.0.2.41</Additional_External_Dependencies>
       <Additional_External_Dependencies>ni_lib_dcaf_progress_bar &gt;=1.1.0.9</Additional_External_Dependencies>
+      <Additional_External_Dependencies>ni_lib_unicode &gt;=2.0.1.6</Additional_External_Dependencies>
     </Package_Dependencies>
     <Custom_Action_VIs>
       <Pre-Build_VI/>
@@ -66,7 +67,7 @@
       <Copyright/>
       <Packager>Soliton Technologies</Packager>
       <URL>https://github.com/solitontech/labview-llm-libraries</URL>
-      <Release_Notes>This is the initial release of Soliton LabVIEW LLM Libraries. </Release_Notes>
+      <Release_Notes>Resolved issues in unicode handling when publishing the responses to the html chat ui</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -323,7 +324,7 @@
         <Path>..\src\UI</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2E22B268EE10A75704F552D337429268</GUID>
+      <GUID>1613516194496AE2A54E9AD7B5F73E3C</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -428,7 +429,7 @@
         <Path>..\src\models\instantiate_embedding_model.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B00582CFCE901053912B5CD5ECF968BB</GUID>
+      <GUID>F780BA7B8434C82F69F458DA34B9E168</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -603,7 +604,7 @@
         <Path>..\src\vectorstore\abstract_vector_base\retrieve_vectors.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>149DCD0B3AC14628D3204083E28EB82E</GUID>
+      <GUID>266ABBE50FCF918896C2A58DAF3D7482</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -652,7 +653,7 @@
         <Path>..\src\Simple QA Dynamic</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>96F65485AD0CFF2C9E4564414080AD4B</GUID>
+      <GUID>4FC6190FB762FDF1436D058BDDB8BC77</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -715,7 +716,7 @@
         <Path>..\src\agent\agent_simple_qa\poly\ask_poly.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>30A96D4D52CCFFBBE94372999F99164E</GUID>
+      <GUID>2708F06F091A2A8414282F6D968514FC</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -750,7 +751,7 @@
         <Path>..\src\agent\agent_simple_qa_dynamicdata\instantiate_simple_qa_dynamic.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>AF64A2B08D7C7CEFD2BB7A558AACE12F</GUID>
+      <GUID>6235F15B808EDDB4A168610012E8F2EF</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -785,7 +786,7 @@
         <Path>..\src\user_interfaces\simple_html_chat_ui\apis</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>427123EDB9BFD817F34BAD44E73197E9</GUID>
+      <GUID>63E5A8242C765A2DB993B0D4FEC8AB6F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>6</Parent_Palette_Index>
@@ -862,7 +863,7 @@
         <Path>..\src\user_interfaces\simple_html_chat_ui\apis\destroy.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>A2490EACF74A7C07EE911D3D9B0EF40D</GUID>
+      <GUID>199EE0340447FDEBA991B980A90B4B1A</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>

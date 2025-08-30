@@ -28,3 +28,7 @@ src/user_interfaces/simple_html_chat_ui/web_files/node_modules/
 
 # Ignore build output folder
 builds/
+
+# Ignore the pycache and venv of python code
+venv/
+__pycache__/

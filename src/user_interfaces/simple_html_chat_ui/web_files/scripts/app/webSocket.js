@@ -203,7 +203,6 @@ function sendMessage(question = "") {
 
   if (socket?.readyState === WebSocket.OPEN) {
     try {
-      console.log("Sending message:", text);
       socket.send(JSON.stringify({ key: "User Prompt", data: text }));
       showTyping();
     } catch (error) {

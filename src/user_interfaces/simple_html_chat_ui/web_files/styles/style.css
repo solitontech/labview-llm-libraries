@@ -194,12 +194,14 @@ body {
 }
 
 .message {
-  margin-bottom: 16px;
   display: inline-block;
-  white-space: pre-wrap;
   font-size: 0.9375rem;
   line-height: 1.5;
   color: var(--text-color);
+}
+
+.message p {
+  margin: 2px 0px;
 }
 
 .avatar {

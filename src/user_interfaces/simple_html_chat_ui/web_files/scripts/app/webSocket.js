@@ -203,7 +203,6 @@ function sendMessage(question = "") {
 
   if (socket?.readyState === WebSocket.OPEN) {
     try {
-      console.log("Sending message:", text);
       socket.send(JSON.stringify({ key: "User Prompt", data: text }));
       showTyping();
     } catch (error) {
@@ -296,7 +295,7 @@ function addMessageToChatbox(sender, message, source) {
 
   const messageDiv = document.createElement("div");
   messageDiv.className = "message";
-  messageDiv.innerHTML = message;
+  messageDiv.innerHTML = marked.parse(message);
 
   const messageContainer = document.createElement("div");
   messageContainer.className = containerClass;

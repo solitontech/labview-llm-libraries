@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExpertPdf.PdfToImage.NetCore</name>
+    </assembly>
+    <members>
+        <member name="T:ExpertPdf.PdfToImageColorSpace">
+            <summary>
+            The generated images color space.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.PdfToImageColorSpace.RGB">
+            <summary>
+            RGB
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.PdfToImageColorSpace.Gray">
+            <summary>
+            Gray
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.PdfToImageConverter">
+            <summary>
+            The PDF to Image converter class
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.PdfToImageConverter.#ctor">
+            <summary>
+            The pdf to image converter constructor
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.PdfToImageConverter.ConvertToImages(System.IO.Stream)">
+            <summary>
+            Convert to images the PDF pages from the specified PDF stream. 
+            </summary>
+            <param name="pdfStream">The PDF stream from where the pages will be converted to images. It can be for example a MemoryStream or a 
+            FileStream.</param>
+        </member>
+        <member name="M:ExpertPdf.PdfToImageConverter.ConvertToImages(System.String)">
+            <summary>
+            Convert to images the PDF pages from the specified PDF file. 
+            </summary>
+            <param name="pdfFilePath">The PDF file from where the pages will be converted to images. </param>
+        </member>
+        <member name="M:ExpertPdf.PdfToImageConverter.ConvertToImagesInFolder(System.IO.Stream)">
+            <summary>
+            Convert to images the PDF pages from the specified PDF stream. The images will be saved into the folder specified by 
+            ImagesPath property, in the format specified by ImagesFormat property.
+            </summary>
+            <param name="pdfStream">The PDF stream from where the pages will be converted to images. It can be for example a MemoryStream or a FileStream.</param>
+        </member>
+        <member name="M:ExpertPdf.PdfToImageConverter.ConvertToImagesInFolder(System.String)">
+            <summary>
+            Convert to images the PDF pages from the specified PDF file. The images will be saved into the folder specified by 
+            ImagesPath property, in the format specified by ImagesFormat property.
+            </summary>
+            <param name="pdfFilePath">The PDF file from where the pages will be converted to images. </param>
+        </member>
+        <member name="M:ExpertPdf.PdfToImageConverter.GetPageCount(System.String)">
+            <summary>
+            Gets the number of pages in the specified PDF file.
+            </summary>
+            <param name="pdfFilePath">The path of the file containing the PDF document.</param>
+            <returns>The number of pages in the PDF document.</returns>
+        </member>
+        <member name="M:ExpertPdf.PdfToImageConverter.GetPageCount(System.IO.Stream)">
+            <summary>
+            Gets the number of pages in the specified PDF stream.
+            </summary>
+            <param name="pdfStream">The stream containing the PDF document.</param>
+            <returns>The number of pages in the PDF document.</returns>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.StartPageNumber">
+            <summary>
+            The page number from where the conversion to images will start. The default value is 1 which means the conversion to images
+            will start from the first page.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.EndPageNumber">
+            <summary>
+            The page number where the conversion to images will end. The default value is 0 which means that all the PDF document pages 
+            will be converted to images starting from the StartPageNumber page.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.UserPassword">
+            <summary>
+            The ASCII password to be used to open the PDF document for reading. The default value is null which means that
+            no password will be used to open the PDF document.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.Resolution">
+            <summary>
+            The resolution of the generated images in DPI. Default value is 120.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.ColorSpace">
+            <summary>
+            The color space of the generated images. Default value is RGB.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.ImagesPath">
+            <summary>
+            The path to the disk folder where the images will be saved when the method ConvertToImagesInFolder() is used.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.ImagesPrefix">
+            <summary>
+            The prefix for extracted images file name.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.ImagesFormat">
+            <summary>
+            The image format for the generated images.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.LicenseKey">
+            <summary>
+            The license key string received after the product purchase or 
+            a demo license key for the demo version of the converter. This property must be set
+            before calling the conversion to images method. When this property is null, the converter
+            will run in demo mode.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.PdfToolsTimeout">
+            <summary>
+            Timeout in seconds for the current operation. Default value is 600 seconds.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.PdfToolsFullPath">
+            <summary>
+            Gets or sets the full path (including the file name) of the pdf tools engine helper file. 
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.PdfToImageConverter.DocumentInformation">
+            <summary>
+            PDF document information. This property is populated after the requested operation (ConvertToText) is finished.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.DocumentInformation">
+            <summary>
+            PDF document properties. 
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.DocumentInformation.Title">
+            <summary>
+            PDF document Title.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.DocumentInformation.Subject">
+            <summary>
+            PDF document Subject.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.DocumentInformation.Keywords">
+            <summary>
+            PDF document Keywords.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.DocumentInformation.Author">
+            <summary>
+            PDF document Author.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.DocumentInformation.Creator">
+            <summary>
+            PDF document Creator.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.DocumentInformation.Producer">
+            <summary>
+            PDF document Producer.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.DocumentInformation.CreationDate">
+            <summary>
+            PDF document CreationDate.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.DocumentInformation.LastModifiedDate">
+            <summary>
+            PDF document LastModifiedDate.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.DocumentInformation.PageCount">
+            <summary>
+            PDF document number of pages.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.PdfToImageException">
+            <summary>
+            The type of exceptions thrown by the library 
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.PdfToImageException.#ctor(System.String)">
+            <summary>
+            Constructs an exception object
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ExpertPdf.PdfToImageException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructs an exception object
+            </summary>
+            <param name="message">The exception message</param>
+            <param name="innerException">The exception which produced this exception</param>
+        </member>
+    </members>
+</doc>

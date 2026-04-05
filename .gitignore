@@ -8,6 +8,7 @@
 # Shared objects (inc. Windows DLLs)
 *.dll
 !src/user_interfaces/simple_html_chat_ui/assembly_support/**/*.dll
+!src/tools/pdf_utility/assembly_support/**/*.dll
 *.so
 *.so.*
 *.dylib

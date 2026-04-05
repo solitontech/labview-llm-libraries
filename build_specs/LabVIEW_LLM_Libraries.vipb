@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-22 20:48:54" Modified_Date="2026-04-05 23:27:08" Creator="venkatesh.chandragir" Comments="" ID="828c059a6794bfbd0d2a50bbcbfb2e00">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-22 20:48:54" Modified_Date="2026-04-05 23:35:47" Creator="venkatesh.chandragir" Comments="" ID="71bbef7a8bce8946067d19647556725c">
   <Library_General_Settings>
     <Package_File_Name>Soliton_lib_LabVIEW_LLM_Libraries</Package_File_Name>
-    <Library_Version>0.1.0.10</Library_Version>
+    <Library_Version>0.1.0.11</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds</Library_Output_Folder>
@@ -338,7 +338,7 @@
         <Path>..\src\UI</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F44FF8687F7D3BCFDEE429A67FAF1F62</GUID>
+      <GUID>DCE52D4FD34A36E386AD2938B7FDD3E6</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -457,7 +457,7 @@
         <Path>..\src\utilities\structured_response\chat_structured_response.vim</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5FAEF9B5D3BC64A401A7EB4423FE5A26</GUID>
+      <GUID>E954D0E82D7C2DB835B34333EA8FB7A6</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -632,7 +632,7 @@
         <Path>..\src\vectorstore\abstract_vector_base\retrieve_vectors.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4498F8FDED9ECD16746688EBF611420A</GUID>
+      <GUID>B5AF6E0FCF6C48A44443E5F58F969ACA</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -681,7 +681,7 @@
         <Path>..\src\Simple QA Dynamic</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4661CAC796B080195A25476F4773F3D4</GUID>
+      <GUID>923542B14CDC26F9D30AFBCF3CBF9B6F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -758,7 +758,7 @@
         <Path>..\src\agent\agent_simple_qa\clear_conversation_history.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>4C67BF4E93311AD5804BB8353763DE77</GUID>
+      <GUID>6848957B14609A23FD6AD25D9602BED2</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -793,7 +793,7 @@
         <Path>..\src\agent\agent_simple_qa_dynamicdata\instantiate_simple_qa_dynamic.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E4AF419163B950D99102772CF0417DE7</GUID>
+      <GUID>F71CDB9CDA33DB313A363BFECBA37723</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -828,7 +828,7 @@
         <Path>..\src\user_interfaces\simple_html_chat_ui\apis</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3D25D528C3C75032A7A2F87BB1E241C4</GUID>
+      <GUID>0B6E117F74A863E7D2D67742D7CA07E8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>6</Parent_Palette_Index>
@@ -905,7 +905,7 @@
         <Path>..\src\user_interfaces\simple_html_chat_ui\apis\destroy.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>D63D929C554963E21BD1CD5DDF88FBF8</GUID>
+      <GUID>40299F86B23B89EB8AA9ACB1A3A6216F</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -954,7 +954,7 @@
         <Path>..\src\utilities\env_variables</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E6412467AE6B51D2D851E6B0ECAF6D21</GUID>
+      <GUID>D3B4D46CB40B21A4C00BA327E33B6204</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>8</Parent_Palette_Index>
@@ -989,7 +989,7 @@
         <Path>..\src\utilities\pdf_utility\pdf_to_image.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>FEC341CA5CFDCFF3B16CC3DD06A42EA1</GUID>
+      <GUID>12779A172B1B13450CB0075454B1EC17</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>8</Parent_Palette_Index>
@@ -1038,7 +1038,7 @@
         <Path>..\src\utilities\env_variables\set_env_variable.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7EDCC8149734F81FACFF152A112491EB</GUID>
+      <GUID>D804BC403E05A564E1B20E02E3C99FD3</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>

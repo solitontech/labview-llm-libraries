@@ -4,9 +4,8 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">536903680</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
-	<Item Name="base64_fast_decode.vi" Type="VI" URL="../../../../examples/utils/env_variables/base64_fast_decode.vi"/>
-	<Item Name="base64_fast_encode.vi" Type="VI" URL="../../../../examples/utils/env_variables/base64_fast_encode.vi"/>
-	<Item Name="get_env_variable.vi" Type="VI" URL="../../../../examples/utils/env_variables/get_env_variable.vi"/>
-	<Item Name="README.md" Type="Document" URL="../../../../examples/utils/env_variables/README.md"/>
-	<Item Name="set_env_variable.vi" Type="VI" URL="../../../../examples/utils/env_variables/set_env_variable.vi"/>
+	<Item Name="base64_fast_decode.vi" Type="VI" URL="../sub_vis/base64_fast_decode.vi"/>
+	<Item Name="base64_fast_encode.vi" Type="VI" URL="../sub_vis/base64_fast_encode.vi"/>
+	<Item Name="get_env_variable.vi" Type="VI" URL="../get_env_variable.vi"/>
+	<Item Name="set_env_variable.vi" Type="VI" URL="../set_env_variable.vi"/>
 </Library>

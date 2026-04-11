@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-22 20:48:54" Modified_Date="2026-04-11 17:54:44" Creator="venkatesh.chandragir" Comments="" ID="f3a1476623bb02b1e9ba7c2380b01541">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2024-09-22 20:48:54" Modified_Date="2026-04-11 18:04:25" Creator="venkatesh.chandragir" Comments="" ID="09b99fb1dced60ffc2f3cc4dba6362fb">
   <Library_General_Settings>
     <Package_File_Name>Soliton_lib_LabVIEW_LLM_Libraries</Package_File_Name>
-    <Library_Version>0.1.0.12</Library_Version>
+    <Library_Version>0.1.0.13</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\src</Library_Source_Folder>
     <Library_Output_Folder>..\builds</Library_Output_Folder>
@@ -343,7 +343,7 @@ Added PDF datasource support</Release_Notes>
         <Path>..\src\UI</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>3313B12D995C4777897D465F2F15FCAB</GUID>
+      <GUID>1DD0D68885A6796871374DC9D43B7545</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -448,7 +448,7 @@ Added PDF datasource support</Release_Notes>
         <Path>..\src\models\instantiate_embedding_model.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DDCC7030AA2EEF1546D34701260B3565</GUID>
+      <GUID>4307C0FFF1E97CEADC95D0283CE78F4B</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -623,7 +623,7 @@ Added PDF datasource support</Release_Notes>
         <Path>..\src\vectorstore\abstract_vector_base\retrieve_vectors.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>2980DB07E627E0CDE5D081A6FAF5031B</GUID>
+      <GUID>0E50D1183A57F72632C7E18B11B3BA41</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -672,7 +672,7 @@ Added PDF datasource support</Release_Notes>
         <Path>..\src\Simple QA Dynamic</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7EFA185C26F61F1EDEC1A1B368A1932B</GUID>
+      <GUID>C6E01F893F52F2AE4559F808420955C4</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -749,7 +749,7 @@ Added PDF datasource support</Release_Notes>
         <Path>..\src\agent\agent_simple_qa\clear_conversation_history.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>05312EBB7BFF3046A8642E31DC7722D2</GUID>
+      <GUID>4E0EDBD72AD507BECBCEFA298108C340</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>3</Parent_Palette_Index>
@@ -784,7 +784,7 @@ Added PDF datasource support</Release_Notes>
         <Path>..\src\agent\agent_simple_qa_dynamicdata\instantiate_simple_qa_dynamic.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9B760D603AEC52CFC53CE8FF3EB1D5C5</GUID>
+      <GUID>78A19B091A354F47360B23DD9C8F1ED1</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -819,7 +819,7 @@ Added PDF datasource support</Release_Notes>
         <Path>..\src\user_interfaces\simple_html_chat_ui\apis</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9512AE8F1B168E723177D01301054410</GUID>
+      <GUID>A5E4C378D8953C58D94AC51255A75F41</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>6</Parent_Palette_Index>
@@ -896,7 +896,7 @@ Added PDF datasource support</Release_Notes>
         <Path>..\src\user_interfaces\simple_html_chat_ui\apis\destroy.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>30ACC1C725F3B17EC4C049091EF2BDAA</GUID>
+      <GUID>6719E112E4EB2E3050F724E3BCDD5B03</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -945,7 +945,7 @@ Added PDF datasource support</Release_Notes>
         <Path>..\src\utilities\env_variables</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>6BF3CE0A178185A3B612AFB9D751CC0B</GUID>
+      <GUID>06B01F05284058624CEC82F544AACA24</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>8</Parent_Palette_Index>
@@ -980,7 +980,7 @@ Added PDF datasource support</Release_Notes>
         <Path>..\src\utilities\pdf_utility\pdf_to_image.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C67F32AAD4A7542F9EA3D376007340AE</GUID>
+      <GUID>9379D4FF63CCEC2131EF4F3318AB0D16</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>8</Parent_Palette_Index>
@@ -1029,7 +1029,7 @@ Added PDF datasource support</Release_Notes>
         <Path>..\src\utilities\env_variables\set_env_variable.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B8093C8B5918EA7114B83BE5D413B0A4</GUID>
+      <GUID>596A9211054FBBC8D22E07CE17C90A5D</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>

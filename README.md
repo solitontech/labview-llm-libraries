@@ -20,6 +20,12 @@ To be documented
 
 | Model Name | Provider | Support Available | Online/Offline |
 |----------|----------|----------|----------|
+| gpt-5.4-mini | OpenAI | Yes | Online |
+| gpt-5.4 | OpenAI |  Yes | Online |
+| gpt-5.2-mini | OpenAI | Yes | Online |
+| gpt-5.2 | OpenAI |  Yes | Online |
+| gpt-5-mini | OpenAI | Yes | Online |
+| gpt-5 | OpenAI |  Yes | Online |
 | gpt-4o-mini | OpenAI | Yes | Online |
 | gpt-4o | OpenAI |  Yes | Online |
 | gpt-4-turbo | OpenAI |  Yes | Online |

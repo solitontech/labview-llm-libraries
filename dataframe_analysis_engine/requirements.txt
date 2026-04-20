@@ -1,0 +1,8 @@
+grpcio==1.66.2
+grpcio-tools==1.66.2
+pandas>=2.2.2
+openpyxl==3.1.5
+langchain==0.3.1
+langchain-community==0.3.1
+langchain-openai==0.2.1
+matplotlib==3.9.2
